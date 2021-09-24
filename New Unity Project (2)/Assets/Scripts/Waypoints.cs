@@ -12,13 +12,7 @@ public class Waypoints : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log(collision);
+    {        
         Enemy.IncrementIndex();
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log(other);
     }
 }
