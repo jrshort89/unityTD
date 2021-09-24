@@ -3208,6 +3208,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8924dfb3d72d68342aa94e05673e73f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 0}
+  timeBetweenWaves: 5
 --- !u!4 &1402171126
 Transform:
   m_ObjectHideFlags: 0
