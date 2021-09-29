@@ -10,9 +10,4 @@ public class Waypoints : MonoBehaviour
     {
         waypoints = Object.FindObjectsOfType<Waypoints>();        
     }
-
-    private void OnCollisionEnter(Collision collision)
-    {        
-        Enemy.IncrementIndex();
-    }
 }
