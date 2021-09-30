@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
     public static int wayArrLength;
 
     private Waypoints target;
-    private int waypointIndex = 0;
+    public int waypointIndex = 1;
     private void Start()
     {
         currentLevel = Object.FindObjectOfType<Level>();
@@ -21,21 +21,15 @@ public class Enemy : MonoBehaviour
         wayArrLength = currentLevel.levelWaypoints.Length;
     }
 
-    void EnemyReachEnd()
-    {
-        if (wayArrLength == waypointIndex)
-        {
-            Object.Destroy(this);
-        }
-    }
-
     public void IncrementIndex()
     {
         if (wayArrLength - 1 > waypointIndex)
         {
-            waypointIndex++;
-            EnemyReachEnd();
-        }        
+            waypointIndex++;          
+        } else
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
